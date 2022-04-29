@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <title>title</title>
     <link rel="stylesheet" href="index.css">
+  <script>
+    function openDomainShop() {
+      const id = document.getElementById("user-id").value;
+      window.open(`https://muumuu-domain.com/domain/search?domain=${id}`);
+    }
+  </script>
   </head>
   <body>
     <div class="slide">
@@ -23,13 +29,19 @@
     <div class="slide">
       <div class="slide-content">
         <h2>IDを決めましょう</h2>
-        <input type="text" value="TakutoYoshikai">
+        <input type="text" value="TakutoYoshikai" id="user-id">
       </div>
     </div>
     <div class="slide">
       <div class="slide-content">
         <h2>クリエイター名を決めましょう</h2>
         <input type="text" value="3hacks">
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>ドメインを取りましょう</h2>
+        <button onclick="openDomainShop()">ドメイン登録</button>
       </div>
     </div>
   </body>

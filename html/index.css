@@ -44,3 +44,10 @@ iframe {
   margin-right: auto;
   border: 0;
 }
+
+button {
+  font-size: 40px;
+  border-radius: 6px;
+  background-color: lightgray;
+  color: #333;
+}
