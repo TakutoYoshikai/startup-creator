@@ -3,11 +3,13 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const userHome = process.env[process.platform == "win32" ? "USERPROFILE" : "HOME"];
+const cors = require("cors");
 const fs = require("fs");
 
 const generate = require("portfolio-template");
 const execSync = require("child_process").execSync;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 
