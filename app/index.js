@@ -20,6 +20,8 @@ app.post("/portfolio", (req, res) => {
   const schools = req.body.schools;
   const skills = req.body.skills;
   const email = req.body.email;
+  const id = req.body.id;
+  const domain = req.body.domain;
   if (!name || !job || !works || !schools || !skills || !email) {
     res.status(400).json({
       message: "Bad Request",
@@ -37,7 +39,7 @@ app.post("/portfolio", (req, res) => {
     return;
   }
   try {
-    execSync(`${__dirname}/publish-ghpages.sh TakutoYoshikai example.com`);
+    execSync(`${__dirname}/publish-ghpages.sh ${id} ${domain}`);
   } catch(err) {
     console.error(err);
   }
