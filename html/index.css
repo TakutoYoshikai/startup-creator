@@ -23,6 +23,7 @@ body {
 .slide-content {
   padding-top: 300px;
   text-align: center;
+  width: 100%;
 }
 
 input {
@@ -50,4 +51,8 @@ button {
   border-radius: 6px;
   background-color: lightgray;
   color: #333;
+}
+
+.job {
+  width: 80%!important;
 }
