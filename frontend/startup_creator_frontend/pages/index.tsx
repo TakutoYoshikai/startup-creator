@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { ChangeEvent, MouseEventHandler, useState } from 'react'
 import postRequest from '../lib/Request'
-import axis from 'axios';
+import axisBase from 'axios';
 import { TextField, Button } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -10,13 +10,21 @@ import styles from '../styles/Home.module.css'
 const Home: NextPage = () => {
   const [inputName, setName] = useState('')
 
+  const axios = axisBase.create({
+    baseURL: 'http://localhost:3000/portfolio',
+    headers: {
+      'content-type': 'application/json'
+    },
+    responseType: 'json'
+  })
+
   const submit = (event: MouseEventHandler | any) => {
     event.preventDefault()
   }
 
   console.log(inputName)
 
-  axis.post(postRequest.InsertPortfolioData, {
+  axios.post(postRequest.InsertPortfolioData, {
     name: inputName
   })
 
