@@ -9,6 +9,9 @@
       const id = document.getElementById("user-id").value;
       window.open(`https://muumuu-domain.com/domain/search?domain=${id}`);
     }
+    function openBCGenerator() {
+      window.open("https://takutoyoshikai.github.io/bc-generator");
+    }
   </script>
   </head>
   <body>
@@ -41,7 +44,19 @@
     <div class="slide">
       <div class="slide-content">
         <h2>ドメインを取りましょう</h2>
-        <button onclick="openDomainShop()">ドメイン登録</button>
+        <button onclick="openDomainShop()">ドメインサイト</button>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>ドメインは何にしましたか？</h2>
+        <input type="text" value="3hacks.net">
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>名刺を作りましょう</h2>
+        <button onclick="openBCGenerator()">名刺作成</button>
       </div>
     </div>
   </body>
