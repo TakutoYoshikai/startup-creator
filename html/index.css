@@ -8,6 +8,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .slide h2 {
@@ -21,4 +22,25 @@ body {
 
 .slide-content {
   padding-top: 300px;
+  text-align: center;
+}
+
+input {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+input[type=text] {
+  font-size: 50px;
+  width: 400px;
+  border: 0px;
+}
+
+iframe {
+  width: 80%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
 }
