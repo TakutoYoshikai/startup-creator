@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>title</title>
     <link rel="stylesheet" href="index.css">
+    <script src="./planB.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     function openDomainShop() {
       const id = document.getElementById("user-id").value;
@@ -11,6 +13,9 @@
     }
     function openBCGenerator() {
       window.open("https://takutoyoshikai.github.io/bc-generator");
+    }
+    function openScrapbox() {
+      window.open("https://scrapbox.io/");
     }
   </script>
   </head>
@@ -38,7 +43,7 @@
     <div class="slide">
       <div class="slide-content">
         <h2>クリエイター名を決めましょう</h2>
-        <input type="text" value="3hacks">
+        <input type="text" value="TAKUTO YOSHIKAI">
       </div>
     </div>
     <div class="slide">
@@ -61,8 +66,27 @@
     </div>
     <div class="slide">
       <div class="slide-content">
+        <h2>ドメインのレコードにGithub Pagesを設定しよう</h2>
+        <p>CNAMEに${GITHUB_ID}.github.ioを設定してください</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>ポートフォリオサイトを公開しましょう</h2>
+        <button onclick="generatePortfolio()">ポートフォリオを公開する</button>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
         <h2>名刺を作りましょう</h2>
         <button onclick="openBCGenerator()">名刺作成</button>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>Scrapboxに自分の公開ページを作りましょう</h2>
+        <p>Scrapboxに自分のIDの公開プロジェクトを作り, 自分の情報を載せましょう</p>
+        <button onclick="openScrapbox()">Scrapboxを登録する</button>
       </div>
     </div>
   </body>
