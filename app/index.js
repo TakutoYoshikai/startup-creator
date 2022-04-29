@@ -20,6 +20,12 @@ app.post("/portfolio", (req, res) => {
   const schools = req.body.schools;
   const skills = req.body.skills;
   const email = req.body.email;
+  if (!name || !job || !works || !schools || !skills || !email) {
+    res.status(400).json({
+      message: "Bad Request",
+    });
+    return;
+  }
 
   try {
     generate(name, job, works, schools, skills, email, userHome + "/Desktop");
