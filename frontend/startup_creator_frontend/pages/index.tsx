@@ -11,7 +11,6 @@ const Home: NextPage = () => {
   const [inputName, setName] = useState('')
 
   const axios = axisBase.create({
-    baseURL: 'http://localhost:3000/portfolio',
     headers: {
       'content-type': 'application/json'
     },
