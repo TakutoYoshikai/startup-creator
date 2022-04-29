@@ -1,0 +1,24 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.slide {
+  background-color: #EEE;
+  border-bottom: 1px #000 solid;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.slide h2 {
+  font-size: 62px;
+  text-align: center;
+}
+.slide p {
+  font-size: 32px;
+  text-align: center;
+}
+
+.slide-content {
+  padding-top: 300px;
+}
