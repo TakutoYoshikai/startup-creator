@@ -2,6 +2,7 @@ const express = require("express");
 
 const app = express();
 const bodyParser = require("body-parser");
+const userHome = process.env[process.platform == "win32" ? "USERPROFILE" : "HOME"];
 
 const generate = require("portfolio-template");
 
@@ -17,7 +18,7 @@ app.post("/portfolio", (req, res) => {
   const email = req.body.email;
 
   try {
-    generate(name, job, works, schools, skills, email);
+    generate(name, job, works, schools, skills, email, userHome + "/Desktop");
   } catch(err) {
     console.error(err);
     res.status(500).json({

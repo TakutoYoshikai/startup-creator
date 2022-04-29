@@ -1,0 +1,17 @@
+{
+  "name": "TAKUTO",
+  "job": "HACKER",
+  "works": [
+    {
+      "title": "Gatebox",
+      "description": "The Virtual Home Robot"
+    }
+  ],
+  "schools": [
+    "Keio University"
+  ],
+  "skills": [
+    "Positive Thinking"
+  ],
+  "email": "takuto@yoshikai.net"
+}
