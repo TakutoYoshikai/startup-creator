@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="index.css">
+  <script>
+    function openDomainShop() {
+      const id = document.getElementById("user-id").value;
+      window.open(`https://muumuu-domain.com/domain/search?domain=${id}`);
+    }
+    function openBCGenerator() {
+      window.open("https://takutoyoshikai.github.io/bc-generator");
+    }
+  </script>
+  </head>
+  <body>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>Startup Creator</h2>
+        <p>自分のクリエイターブランドを立ち上げましょう。</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>SNSのIDが取られてないか確認しましょう</h2>
+      </div>
+    </div>
+    <div class="slide">
+      <iframe src="https://namae.dev"></iframe>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>IDを決めましょう</h2>
+        <input type="text" value="TakutoYoshikai" id="user-id">
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>クリエイター名を決めましょう</h2>
+        <input type="text" value="3hacks">
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>ドメインを取りましょう</h2>
+        <button onclick="openDomainShop()">ドメインサイト</button>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>ドメインは何にしましたか？</h2>
+        <input type="text" value="3hacks.net">
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>名刺を作りましょう</h2>
+        <button onclick="openBCGenerator()">名刺作成</button>
+      </div>
+    </div>
+  </body>
+</html>
