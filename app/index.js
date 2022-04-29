@@ -3,8 +3,10 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const userHome = process.env[process.platform == "win32" ? "USERPROFILE" : "HOME"];
+const fs = require("fs");
 
 const generate = require("portfolio-template");
+const execSync = require("child_process").execSync;
 
 app.use(bodyParser.json());
 
@@ -26,9 +28,16 @@ app.post("/portfolio", (req, res) => {
     });
     return;
   }
-    res.status(200).json({
-      message: "Success",
-    });
+  try {
+    execSync(`${__dirname}/publish-ghpages.sh TakutoYoshikai example.com`);
+  } catch(err) {
+    console.error(err);
+  }
+  
+  res.status(200).json({
+    message: "Success",
+  });
+  
 
 });
 
